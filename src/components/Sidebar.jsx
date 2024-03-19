@@ -44,21 +44,21 @@ function Sidebar({ openSidebarToggle, OpenSidebar }) {
             <BsPeopleFill className="icon" /> Customers
           </a>
         </li>
-        <li className="sidebar-list-item">
+        {/* <li className="sidebar-list-item">
           <a href="">
             <BsListCheck className="icon" /> Inventory
           </a>
-        </li>
-        <li className="sidebar-list-item">
+        </li> */}
+        {/* <li className="sidebar-list-item">
           <a href="">
             <BsMenuButtonWideFill className="icon" /> Reports
           </a>
-        </li>
-        <li className="sidebar-list-item">
+        </li> */}
+        {/* <li className="sidebar-list-item">
           <a href="">
             <BsFillGearFill className="icon" /> Profile
           </a>
-        </li>
+        </li> */}
       </ul>
     </aside>
   );
