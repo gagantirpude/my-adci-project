@@ -1,24 +1,24 @@
-import { useState } from "react";
-import Header from "./components/Header";
-import Sidebar from "./components/Sidebar";
-import Home from "./pages/Home";
+//package import
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
+//page import
+import DashBoard from "./pages/Dashboard";
+import Login from "./pages/Login";
+import Register from "./pages/Register";
+
+//function App
 function App() {
-  const [openSidebarToggle, setOpenSidebarToggle] = useState(false);
-
-  const OpenSidebar = () => {
-    setOpenSidebarToggle(!openSidebarToggle);
-  };
-
   return (
-    <div className="grid-container">
-      <Header OpenSidebar={OpenSidebar} />
-      <Sidebar
-        openSidebarToggle={openSidebarToggle}
-        OpenSidebar={OpenSidebar}
-      />
-      <Home />
-    </div>
+    <Router>
+      {/* <Header /> */}
+      <Routes>
+        <Route path="/" element={<DashBoard />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/register" element={<Register />} />
+        <Route path="*" element={<h1>NotFound</h1>} />
+      </Routes>
+      {/* <Footer /> */}
+    </Router>
   );
 }
 
